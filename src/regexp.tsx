@@ -21,7 +21,7 @@ export const picture = /(gif|jpg|jpeg|png|GIF|JPG|PNG|JPEG|BMP|bmp)$/;
 // 视频格式
 export const video = /(mp4|m4v|avi|dat|mkv|flv|vob|mov|3gp|mpg|mpeg|mpe|rmvp|rm|wmv|asf|asx|MP4|M4V|AVI|DAT|MKV|FLV|VOB|MOV|3GP|MPG|MPEG|MPE|RMVP|RM|WMV|ASF|ASX)$/;
 /**
-* 检测长度
+* 返回检测长度的regexp
 */
 export function length(max: number, min: number = 0) {
   return new RegExp(`^.{${min},${max}}$`);

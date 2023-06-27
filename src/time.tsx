@@ -37,6 +37,7 @@ export const getYMD: (timestamp: number | string) => IYMD = (timestamp) => {
  * 设置该天的时分秒
  * @param {any} time
  * @param {string} dayTime 时间点 例：00:00:00
+ * @returns {UTCTime} 返回utctime，但是现在感觉不是很适合
  */
 export const toUTCTime = (time: any, dayTime: string) => {
   return JSON.parse(JSON.stringify(dayjs(`${dayjs(time).format('YYYY-MM-DD')} ${dayTime}`)));
@@ -46,6 +47,7 @@ export const toUTCTime = (time: any, dayTime: string) => {
  * 给日期加天数，如2022-10-30 + 3 = 2022-11-2
  * @param {any} nowTime 日期
  * @param {number} days 要加的天数
+ * @returns {string} 2022-11-2的形式
  */
 export const addDay = (nowTime: string, days: number) => {
   return dayjs(new Date(new Date(nowTime).getTime() + days * 24 * 60 * 60 * 1000 )).format('YYYY-MM-DD');
