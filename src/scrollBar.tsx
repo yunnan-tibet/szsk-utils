@@ -3,8 +3,6 @@
  */
 export const globalMonitorScroll = () => {
   const wrapper = document.getElementsByClassName('j-scrollbar')
-
-
   const onScroll = (dom: Element) => {
     let timer: any = null;
     return () => {

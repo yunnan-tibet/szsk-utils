@@ -1,10 +1,10 @@
 /**
  * 返回给定小数位数的数字字符串
- *
- * @param v 要转换的数字/数字字符串
- * @param n 小数点后几位
  * 注：
  *  这里使用的是四舍五入
+ * @param {string | number} v 要转换的数字/数字字符串
+ * @param {number} n 小数点后几位
+ * @returns {string}
  */
 export const toFixedN =  (v: string|number, n: number = 2) => {
   if (typeof v === 'object') { return ''; }; // 去除null，object，function， array等
@@ -14,8 +14,9 @@ export const toFixedN =  (v: string|number, n: number = 2) => {
 
 /**
  * 大数字增加逗号分隔，使用英文逗号,,,,
- * @param num 待转换数字/数字字符串
- * @param n 保留位数
+ * @param {string | number} num 待转换数字/数字字符串
+ * @param {number} n 保留位数
+ * @returns {string}
  */
 export const addNumComma = (num: string | number, n?: number) => {
     const originNum = +num;
@@ -40,9 +41,9 @@ export const addNumComma = (num: string | number, n?: number) => {
   };
 
 /**
- *
  * 四舍五入保留2位小数（不够位数，则用0替补）
- *
+ * @param {number} num 
+ * @returns {string}
  */
 export function keepTwoDecimalFull(num: any) {
   let result = parseFloat(num);
@@ -63,7 +64,7 @@ export function keepTwoDecimalFull(num: any) {
 }
 
 /**
- * 用来计算数值
+ * 用来计算数值，基本原理是取得小数位数，进行power提升为整数计算。
  */
 export const CMX = {
   /**
@@ -136,7 +137,6 @@ export const CMX = {
           Math.pow(10, m)
       );
   },
-
   /**
    ** 除
    **/

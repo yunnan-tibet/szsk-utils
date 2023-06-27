@@ -1,8 +1,9 @@
 /**
  * 设置cookie
- * @param key
- * @param val
- * @param time
+ * @param {string} key key
+ * @param {string} val key对应的value
+ * @param {number} time 这里单位是天
+ * @returns {void}
  */
 export function setCookie(key: string, val: string, time?: number) {
   const date = new Date();
@@ -13,7 +14,8 @@ export function setCookie(key: string, val: string, time?: number) {
 
 /**
  * 获取cookie的value
- * @param key cookie key
+ * @param {string} key cookie key
+ * @returns {string}
  */
 export function getCookie(key: string) {
   let arr,reg=new RegExp("(^| )"+key+"=([^;]*)(;|$)"); 
@@ -22,7 +24,8 @@ export function getCookie(key: string) {
 
 /**
  * 删除cookie
- * @param key cookie key
+ * @param {string} key cookie key
+ * @returns {void}
  */
 export function delCookie(key: string) { 
     const exp = new Date(); 

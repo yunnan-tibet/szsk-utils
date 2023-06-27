@@ -1,14 +1,15 @@
 /**
  * 空操作
  */
-export const noop = () => { };
+export const noop = () => {};
 
 /**
- * 节流，hook方法写法在hook包里
- * @param fn 
- * @param delay 
+ * 普通节流函数，一个时间段只执行一次
+ * @param {Function} fn 
+ * @param {number} delay 毫秒
+ * @returns {Function} 返回的节流函数
  */
-export const useThrottle = (fn: any, delay: number) => {
+export const useThrottle = (fn: Function, delay: number) => {
   let timer: any = null;
   // @ts-ignore
   return (...args) => {
@@ -21,7 +22,13 @@ export const useThrottle = (fn: any, delay: number) => {
   }
 }
 
-// 防抖函数
+/**
+ * 防抖函数，一定时间间隔后执行一次
+ * @param {Function} func 
+ * @param {number} wait 毫秒
+ * @param {boolean} immediate 是否立即执行，true 立即 false 等待wait时间后执行
+ * @returns {Function} 防抖作用后函数
+ */
 export const debounce = (
   func: Function,
   wait: number,

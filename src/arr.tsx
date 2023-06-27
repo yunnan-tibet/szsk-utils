@@ -1,16 +1,20 @@
 /**
- * 基本类型数组去重
- * @param arr1 
- * @param arr2 
+ * 两个基本数据类型的数组去重，基本是数字或者字符串
+ * @param {Array<string | number>} arr1 
+ * @param {Array<string | number>} arr2
+ * @returns {Array<string | number>} 去重后的基本数据类型数组
  */
 export const getArrDiff = (arr1: any[], arr2: any[]) => arr1.concat(arr2).filter((v, i, arr) => arr.indexOf(v) === arr.lastIndexOf(v))
 
 /**
- * 数组对象去重
- * @param arr1 
- * @param arr2 
+ * 两个对象类型数组去重
+ * @param {any[]} arr1 
+ * @param {any[]} arr2 
+ * @param {string} key 使用什么属性进行去重
+ * @returns {any[]} 去重后的对象类型数组
  */
-export const arrDeDuplication = (arr1: any[], arr2: any[]) => {
+export const arrDeDuplication = (arr1: any[], arr2: any[], key?: string) => {
+  const _key = key || 'id';
   if (!arr1 || !arr1.length) {
     return arr2;
   }
@@ -19,7 +23,7 @@ export const arrDeDuplication = (arr1: any[], arr2: any[]) => {
   }
   let _arr = [...arr1];
   arr2.forEach((item2) => {
-    if (!arr1.filter(item1 => item1.id === item2.id).length) {
+    if (!arr1.filter(item1 => item1[_key] === item2[_key]).length) {
       _arr.push(item2);
     }
   });
@@ -27,12 +31,11 @@ export const arrDeDuplication = (arr1: any[], arr2: any[]) => {
 }
 
 /**
- *
- * @export 交换数组元素
+ * 交换数组元素位置
  * @param {any[]} arr
  * @param {number} index1
  * @param {number} index2
- * @returns
+ * @returns {any[]} 交换后的数组
  */
 export function swapItems(arr: any[], index1: number, index2: number) {
   arr[index1] = arr.splice(index2, 1, arr[index1])[0];
@@ -40,30 +43,27 @@ export function swapItems(arr: any[], index1: number, index2: number) {
 }
 
 /**
- *
- * @export 上移
+ * 数组上移某个idx
  * @param {any[]} arr
  * @param {number} index
- * @returns
+ * @returns {any[]} 上移后的数组
  */
 export function arrUpRecord(arr: any[], index: number) {
   if (!index) {
-    return;
+    return arr;
   }
-  swapItems(arr, index, index - 1);
+  return swapItems(arr, index, index - 1);
 }
 
 /**
- *
- *
- * @export 下移
+ * 数组下移某个idx
  * @param {any[]} arr
  * @param {number} index
- * @returns
+ * @returns {any[]} 下移后的数组
  */
 export function arrDownRecord(arr: any[], index: number) {
   if (index >= arr.length - 1) {
-    return;
+    return arr;
   }
-  swapItems(arr, index, index + 1);
+  return swapItems(arr, index, index + 1);
 }

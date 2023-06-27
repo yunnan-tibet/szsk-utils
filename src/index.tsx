@@ -8,9 +8,6 @@ import * as scrollBarUtils from './scrollBar';
 import * as arrUtils from './arr';
 import * as treeUtils from './tree';
 import * as numberUtils from './number';
-import * as scannerUtils from './scanner';
-import * as tableUtils from './table';
-import * as permissionUtils from './permission';
 import * as hookUtils from './hook';
 
 export { 
@@ -24,8 +21,5 @@ export {
   arrUtils, 
   treeUtils, 
   numberUtils, 
-  scannerUtils, 
-  tableUtils,
-  permissionUtils,
   hookUtils
 };

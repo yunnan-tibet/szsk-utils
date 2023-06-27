@@ -1,6 +1,7 @@
 /**
- * 对象中的值trim操作
+ * 对象中的值trim操作，对象引用操作
  * @param data 
+ * @returns {void}
  */
 export const trimAll: (data?: { [key: string]: any }) => void = (data) => {
   if (!data) {
@@ -14,9 +15,9 @@ export const trimAll: (data?: { [key: string]: any }) => void = (data) => {
 }
 
 /**
- * 去掉对象中的空值，对象直接操作，请勿赋值
+ * 去掉对象中的空值，对象引用操作
  * @param data 现在的数据
- * @returns 去空之后的对象
+ * @returns {void}
  */
 export const removeNull: (data: { [key: string]: any }) => void = (data) => {
   trimAll(data);
@@ -30,7 +31,11 @@ export const removeNull: (data: { [key: string]: any }) => void = (data) => {
   })
 }
 
-// 这是个深拷贝的方法
+/**
+ * 深拷贝
+ * @param {any} obj
+ * @returns {any} 深拷贝的对象
+ */
 export const deepClone = (obj: any) => {
   if (obj === null) return obj;
   if (obj instanceof Date) return new Date(obj);
