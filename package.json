@@ -1,6 +1,6 @@
 {
   "name": "@szsk/utils",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "szsk utils",
   "main": "lib/index.js",
   "scripts": {
@@ -48,5 +48,22 @@
   },
   "peerDependencies": {
     "react": ">=16.9.0"
-  }
+  },
+  "keywords": [
+    "工具库",
+    "utils",
+    "树形结构方法",
+    "树操作方法",
+    "树方法",
+    "tree structure utils",
+    "tree processing",
+    "tree utils",
+    "cookie",
+    "url",
+    "time",
+    "regexp",
+    "hook",
+    "func",
+    "arr"
+  ]
 }
