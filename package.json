@@ -1,7 +1,7 @@
 {
   "name": "@szsk/utils",
-  "version": "0.1.5",
-  "description": "szsk utils",
+  "version": "0.1.7",
+  "description": "common utils",
   "main": "lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
@@ -14,12 +14,12 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunnan-tibet/szsk_utils"
+    "url": "https://github.com/yunnan-tibet/szsk-utils"
   },
   "bugs": {
-    "url": "https://github.com/yunnan-tibet/szsk_utils/issues"
+    "url": "https://github.com/yunnan-tibet/szsk-utils/issues"
   },
-  "author": "qhchen@secusoft.cc",
+  "author": "qhchen01@163.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "~7.5.5",
