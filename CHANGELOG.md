@@ -1,3 +1,25 @@
+### 0.2.8
+1.tree utils bugfix
+### 0.2.7
+1.tree utils bugfix
+### 0.2.6
+1.tree utils bugfix
+### 0.2.5
+1.tree utils更新版本
+### 0.2.5
+1.tree utils新增获取某个key的集合方法
+### 0.2.4
+1.tree utils bugfix
+### 0.2.3
+1.tree utils备注更新
+### 0.2.2
+1.tree utils bugfix
+### 0.2.1
+1.tree utils方法升级，容错
+### 0.2.0
+1.去除react hook，通用化
+### 0.1.8
+1.tree添加使用方向备注
 ### 0.1.7
 1.更改邮箱
 ### 0.1.6

@@ -1,6 +1,6 @@
 {
   "name": "@szsk/utils",
-  "version": "0.1.7",
+  "version": "0.2.8",
   "description": "common utils",
   "main": "lib/index.js",
   "scripts": {
@@ -43,11 +43,9 @@
     "webpack-merge": "~4.2.2"
   },
   "dependencies": {
+    "@szsk/tree-utils": "^0.1.2",
     "core-js": "~2.6.10",
     "dayjs": "^1.11.8"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0"
   },
   "keywords": [
     "工具库",
@@ -62,7 +60,6 @@
     "url",
     "time",
     "regexp",
-    "hook",
     "func",
     "arr",
     "number",

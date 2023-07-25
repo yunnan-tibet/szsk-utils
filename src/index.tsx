@@ -6,9 +6,8 @@ import * as funcUtils from './func';
 import * as timeUtils from './time';
 import * as scrollBarUtils from './scrollBar';
 import * as arrUtils from './arr';
-import * as treeUtils from './tree';
 import * as numberUtils from './number';
-import * as hookUtils from './hook';
+import { treeUtils  } from '@szsk/tree-utils'
 
 export { 
   regexpUtils, 
@@ -21,5 +20,4 @@ export {
   arrUtils, 
   treeUtils, 
   numberUtils, 
-  hookUtils
 };
