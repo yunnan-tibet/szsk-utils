@@ -1,3 +1,8 @@
+### 1.0.1
+1.tree utils升级到1.0.2
+### 1.0.0
+1.tree utils升级到1.0.1，其中做了一些方法名以及参数顺序的更新
+2.tree方法文档放到@szsk/tree-utils中
 ### 0.2.8
 1.tree utils bugfix
 ### 0.2.7

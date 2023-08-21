@@ -1,6 +1,6 @@
 {
   "name": "@szsk/utils",
-  "version": "0.2.8",
+  "version": "1.0.1",
   "description": "common utils",
   "main": "lib/index.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "webpack-merge": "~4.2.2"
   },
   "dependencies": {
-    "@szsk/tree-utils": "^0.1.2",
+    "@szsk/tree-utils": "^1.0.2",
     "core-js": "~2.6.10",
     "dayjs": "^1.11.8"
   },
