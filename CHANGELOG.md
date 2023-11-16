@@ -1,3 +1,21 @@
+### 1.2.6
+1.tree-utils升级到1.3.0，增加精准匹配
+### 1.2.4
+1.useThrottle优化，增加触发点为时间段最后执行
+### 1.2.3
+1.tree utils升级到1.2.3
+### 1.2.2
+1.tree utils升级到1.2.2
+### 1.2.1
+1.tree utils升级到1.2.1
+### 1.2.0
+1.tree utils升级到1.2.0
+### 1.1.1
+1.tree utils升级到1.1.1
+### 1.1.0
+1.time utils增加getDatesInRange，tree utils升级到1.1.0
+### 1.0.2
+1.url utils addQueryParams优化：在url没有‘?’的情况下出现&undefined情况
 ### 1.0.1
 1.tree utils升级到1.0.2
 ### 1.0.0

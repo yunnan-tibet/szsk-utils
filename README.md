@@ -153,12 +153,13 @@ export const CMX = {
 ### func
 ```
 /**
- * 普通节流函数，一个时间段只执行一次
+ * 节流函数，一个时间段只执行一次
  * @param {Function} fn 
  * @param {number} delay 毫秒
+ * @param {boolean} atLast 限流阶段最后执行
  * @returns {Function} 返回的节流函数
  */
-export const useThrottle = (fn: Function, delay: number)
+export const useThrottle = (fn: Function, delay: number, atLast?: boolean)
 
 /**
  * 防抖函数，一定时间间隔后执行一次
@@ -173,16 +174,7 @@ export const debounce = (
   immediate: boolean = false
 )
 ```
-### hook
-```
-/**
- * 节流，hook下写法（因为作用域变更导致普通节流失效）
- * @param {Function} fn 
- * @param {number} delay 毫秒
- * @returns {Function} 
- */
-export const useThrottle = (fn: Function, delay: number)
-```
+
 ### obj
 ```
 /**
@@ -260,4 +252,17 @@ export const toUTCTime = (time: any, dayTime: string)
  * @returns {string} 2022-11-2的形式
  */
 export const addDay = (nowTime: string, days: number)
+
+/**
+ * 获取范围内的日期列表
+ * @param startTime 开始时间
+ * @param endTime 结束时间
+ * @param format 格式，默认为YYYY-MM-DD
+ * @returns {string[]} 
+ */
+export const getDatesInRange = (
+  startTime: any,
+  endTime: any,
+  format?: string,
+)
 ```

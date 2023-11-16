@@ -51,5 +51,5 @@ export const addQueryParams = (_url: string, params: any) => {
     return _url || '';
   }
   const [host, queryStr] = _url.split('?');
-  return `${host}${genQuery(params)}&${queryStr}`;
+  return `${host}${genQuery(params)}${queryStr ? '&' + queryStr : ''}`;
 };

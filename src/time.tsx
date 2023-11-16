@@ -52,3 +52,29 @@ export const toUTCTime = (time: any, dayTime: string) => {
 export const addDay = (nowTime: string, days: number) => {
   return dayjs(new Date(new Date(nowTime).getTime() + days * 24 * 60 * 60 * 1000 )).format('YYYY-MM-DD');
 }
+
+/**
+ * 获取范围内的日期列表
+ * @param startTime 开始时间
+ * @param endTime 结束时间
+ * @param format 格式，默认为YYYY-MM-DD
+ * @returns {string[]} 
+ */
+export const getDatesInRange = (
+    startTime: any,
+    endTime: any,
+    format?: string,
+  ) => {
+    const _format = format || 'YYYY-MM-DD';
+    const dates = [];
+    const currentDate = new Date(startTime);
+    // 将日期字符串转换为 Date 对象
+    const endDate = new Date(endTime);
+    while (currentDate <= endDate) {
+      // 将当前日期添加到数组中
+      dates.push(dayjs(currentDate).format(_format));
+      // 增加一天
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    return dates;
+  };

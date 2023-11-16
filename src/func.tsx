@@ -4,23 +4,44 @@
 export const noop = () => {};
 
 /**
- * 普通节流函数，一个时间段只执行一次
+ * 节流函数，一个时间段只执行一次
  * @param {Function} fn 
  * @param {number} delay 毫秒
+ * @param {boolean} atLast 限流阶段最后执行
  * @returns {Function} 返回的节流函数
  */
-export const useThrottle = (fn: Function, delay: number) => {
+export const useThrottle = (fn: Function, delay: number, atLast?: boolean) => {
   let timer: any = null;
   // @ts-ignore
   return (...args) => {
     if (!timer) {
       timer = setTimeout(() => {
         timer = null;
+        if (atLast) {
+          fn(...args);
+        }
       }, delay);
-      fn(...args);
+      if (!atLast) {
+        fn(...args);
+      }
     }
   }
 }
+
+// export const useThrottleLastCb = (fn: Function, delay: number) => {
+//   let timer: any = null;
+//   let currentArgs;
+//   // @ts-ignore
+//   return (...args) => {
+//     currentArgs = args
+//     if (!timer) {
+//       timer = setTimeout(() => {
+//         timer = null;
+//         fn(...args);
+//       }, delay);
+//     }
+//   }
+// }
 
 /**
  * 防抖函数，一定时间间隔后执行一次
